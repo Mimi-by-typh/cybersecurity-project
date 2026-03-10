@@ -9,20 +9,15 @@ export function Hero() {
   return (
     <section
       id="hero"
+      className="min-h-screen bg-gradient-to-br from-[#0F1B4C] via-[#0d2060] to-[#0d1a4a] flex items-center justify-center relative overflow-hidden pt-24 pb-16 px-6 md:pt-28 md:pb-20 md:px-8 lg:px-12"
       style={{
-        minHeight: "100vh",
-        background:
-          "linear-gradient(135deg, #0F1B4C 0%, #0d2060 40%, #0a3080 70%, #0d1a4a 100%)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
         position: "relative",
         overflow: "hidden",
-        padding: "100px 24px 60px",
       }}
     >
       {/* Background decorative circles */}
       <div
+        className="hidden md:block absolute top-10 right-5 w-96 h-96 rounded-full pointer-events-none"
         style={{
           position: "absolute",
           top: "10%",
@@ -36,6 +31,7 @@ export function Hero() {
         }}
       />
       <div
+        className="hidden md:block absolute bottom-10 -left-5 w-80 h-80 rounded-full pointer-events-none"
         style={{
           position: "absolute",
           bottom: "10%",
@@ -51,6 +47,7 @@ export function Hero() {
 
       {/* Floating icons */}
       <div
+        className="hidden md:block absolute top-20 right-12 opacity-15 rotate-15"
         style={{
           position: "absolute",
           top: "20%",
@@ -62,6 +59,7 @@ export function Hero() {
         <Lock size={80} color="#2196F3" />
       </div>
       <div
+        className="hidden md:block absolute bottom-25 left-8 opacity-12 -rotate-10"
         style={{
           position: "absolute",
           bottom: "25%",
@@ -75,6 +73,7 @@ export function Hero() {
 
       {/* Main content */}
       <div
+        className="max-w-4xl text-center relative z-10"
         style={{
           maxWidth: 900,
           textAlign: "center",
@@ -84,6 +83,7 @@ export function Hero() {
       >
         {/* Shield icon */}
         <div
+          className="inline-flex items-center justify-center w-24 h-24 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-[#2196F3] to-[#1565C0] mx-auto mb-8 shadow-lg"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -103,6 +103,7 @@ export function Hero() {
 
         {/* Badge */}
         <div
+          className="inline-block bg-blue-500/15 border border-blue-400/4 rounded-full px-5 py-2 mb-6"
           style={{
             display: "inline-block",
             background: "rgba(33,150,243,0.15)",
@@ -113,6 +114,7 @@ export function Hero() {
           }}
         >
           <span
+            className="font-semibold text-xs text-blue-300 tracking-wider uppercase"
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 13,
@@ -171,6 +173,7 @@ export function Hero() {
 
         {/* Author */}
         <div
+          className="inline-block bg-white/7 border border-white/15 rounded-lg p-4 md:p-6 mb-12"
           style={{
             display: "inline-block",
             background: "rgba(255,255,255,0.07)",
@@ -204,6 +207,7 @@ export function Hero() {
 
         {/* CTA buttons */}
         <div
+          className="flex gap-4 justify-center flex-wrap"
           style={{
             display: "flex",
             gap: 16,
@@ -213,6 +217,7 @@ export function Hero() {
         >
           <button
             onClick={() => handleScroll("#tips")}
+            className="bg-gradient-to-br from-[#2196F3] to-[#1565C0] text-white border-none rounded-lg px-9 py-4 font-bold text-base cursor-pointer shadow-lg transition-transform hover:scale-105"
             style={{
               background:
                 "linear-gradient(135deg, #2196F3, #1565C0)",
@@ -244,6 +249,7 @@ export function Hero() {
           </button>
           <button
             onClick={() => handleScroll("#quiz")}
+            className="bg-transparent text-white border-2 border-white/3 rounded-lg px-9 py-4 font-bold text-base cursor-pointer transition-all hover:border-[#2196F3] hover:bg-[#2196F3]/1 hover:scale-105"
             style={{
               background: "transparent",
               color: "#fff",
@@ -284,6 +290,7 @@ export function Hero() {
 
         {/* Scroll indicator */}
         <div
+          className="mt-15 flex flex-col items-center gap-2 opacity-50"
           style={{
             marginTop: 60,
             display: "flex",
@@ -294,6 +301,7 @@ export function Hero() {
           }}
         >
           <span
+            className="font-inter text-xs text-white tracking-wider uppercase"
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 12,
@@ -305,6 +313,7 @@ export function Hero() {
             Прокрутите вниз
           </span>
           <div
+            className="w-0.5 h-10 bg-gradient-to-b from-white/5 to-transparent rounded-sm"
             style={{
               width: 2,
               height: 40,
