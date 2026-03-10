@@ -31,9 +31,6 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-100 transition-all duration-300 ${
-        scrolled ? "bg-[#0F1B4C]/97 backdrop-blur-md shadow-lg" : "bg-transparent"
-      }`}
       style={{
         position: "fixed",
         top: 0,
@@ -47,7 +44,6 @@ export function Navbar() {
       }}
     >
       <div
-        className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16"
         style={{
           maxWidth: 1200,
           margin: "0 auto",
@@ -61,7 +57,6 @@ export function Navbar() {
         {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex items-center gap-2.5 bg-none border-none cursor-pointer p-0"
           style={{
             display: "flex",
             alignItems: "center",
@@ -73,7 +68,6 @@ export function Navbar() {
           }}
         >
           <div
-            className="bg-[#2196F3] rounded-xl p-1.5 flex items-center justify-center"
             style={{
               background: "#2196F3",
               borderRadius: 10,
@@ -86,7 +80,6 @@ export function Navbar() {
             <Shield size={22} color="#fff" />
           </div>
           <span
-            className="font-montserrat font-bold text-base text-white tracking-wide"
             style={{
               fontFamily: "'Montserrat', sans-serif",
               fontWeight: 700,
@@ -101,18 +94,17 @@ export function Navbar() {
 
         {/* Desktop links */}
         <div
-          className="hidden md:flex gap-1.5 items-center"
           style={{
             display: "flex",
             gap: 6,
             alignItems: "center",
           }}
+          className="hidden md:flex"
         >
           {navLinks.map((link) => (
             <button
               key={link.href}
               onClick={() => handleClick(link.href)}
-              className="bg-none border-none cursor-pointer text-white/85 font-inter text-sm font-medium py-1.5 px-3 rounded-lg transition-all hover:text-white hover:bg-[#2196F3]/2"
               style={{
                 background: "none",
                 border: "none",
@@ -142,7 +134,7 @@ export function Navbar() {
         {/* Mobile burger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden bg-none border-none cursor-pointer text-white p-1.5"
+          className="md:hidden"
           style={{
             background: "none",
             border: "none",
@@ -158,7 +150,6 @@ export function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className="md:hidden bg-[#0F1B4C]/98 border-t border-white/1 pt-4 pb-6 px-6 flex flex-col gap-1"
           style={{
             background: "rgba(15,27,76,0.98)",
             borderTop: "1px solid rgba(255,255,255,0.1)",
@@ -167,12 +158,12 @@ export function Navbar() {
             flexDirection: "column",
             gap: 4,
           }}
+          className="md:hidden"
         >
           {navLinks.map((link) => (
             <button
               key={link.href}
               onClick={() => handleClick(link.href)}
-              className="bg-none border-none cursor-pointer text-white/85 font-inter text-sm font-medium py-2.5 px-3 rounded-lg text-left transition-all hover:text-white hover:bg-[#2196F3]/1"
               style={{
                 background: "none",
                 border: "none",
