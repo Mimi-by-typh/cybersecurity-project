@@ -111,8 +111,7 @@ export function Footer() {
                   color: "#fff",
                 }}
               >
-                Щёголев Артём Денисович и Рогожников Пётр
-                Леонидович
+                Тихон Рогожников 
               </p>
             </div>
           </div>
@@ -202,7 +201,7 @@ export function Footer() {
                   label: "Предмет",
                   value: "Информатика и ИКТ",
                 },
-                { label: "Класс", value: "9 класс" },
+                { label: "Класс", value: "10 класс" },
                 { label: "Год", value: "2026" },
               ].map((item) => (
                 <div
